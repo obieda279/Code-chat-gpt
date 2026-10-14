@@ -1,0 +1,8 @@
+{
+  "name": "sentinel-dashboard-checks",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Optional DOM checks for the bundled dashboard; Node is not required to run the bot.",
+  "scripts": { "test:ui": "node tests/ui-check.cjs" },
+  "devDependencies": { "jsdom": "30.1.2" }
+}

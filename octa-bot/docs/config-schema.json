@@ -1,0 +1,1530 @@
+{
+  "$defs": {
+    "APC": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "private": {
+          "default": false,
+          "title": "Private",
+          "type": "boolean"
+        },
+        "leaderboard_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Leaderboard Roles",
+          "type": "array"
+        }
+      },
+      "title": "APC",
+      "type": "object"
+    },
+    "Alliances": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "management_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Management Roles",
+          "type": "array"
+        },
+        "r4_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "R4 Roles",
+          "type": "array"
+        },
+        "r5_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "R5 Roles",
+          "type": "array"
+        },
+        "traveler_role_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Traveler Role Id"
+        },
+        "max_alliances": {
+          "default": 10,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Max Alliances",
+          "type": "integer"
+        },
+        "max_members": {
+          "default": 100,
+          "maximum": 1000,
+          "minimum": 1,
+          "title": "Max Members",
+          "type": "integer"
+        },
+        "auto_nick_tag": {
+          "default": false,
+          "title": "Auto Nick Tag",
+          "type": "boolean"
+        }
+      },
+      "title": "Alliances",
+      "type": "object"
+    },
+    "Armory": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        }
+      },
+      "title": "Armory",
+      "type": "object"
+    },
+    "Automod": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "exempt_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Exempt Roles",
+          "type": "array"
+        },
+        "exempt_channels": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Exempt Channels",
+          "type": "array"
+        },
+        "spam": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 5,
+            "window": 5
+          }
+        },
+        "flood": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 3,
+            "window": 30
+          }
+        },
+        "caps": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 70,
+            "window": 5
+          }
+        },
+        "mentions": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 5,
+            "window": 5
+          }
+        },
+        "links": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 5,
+            "window": 5
+          }
+        },
+        "invites": {
+          "$ref": "#/$defs/Filter",
+          "default": {
+            "enabled": false,
+            "action": "delete",
+            "minutes": 10,
+            "threshold": 5,
+            "window": 5
+          }
+        },
+        "allowed_domains": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Allowed Domains",
+          "type": "array"
+        }
+      },
+      "title": "Automod",
+      "type": "object"
+    },
+    "Birthdays": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "send_hour": {
+          "default": 8,
+          "maximum": 23,
+          "minimum": 0,
+          "title": "Send Hour",
+          "type": "integer"
+        },
+        "send_minute": {
+          "default": 0,
+          "maximum": 59,
+          "minimum": 0,
+          "title": "Send Minute",
+          "type": "integer"
+        },
+        "message": {
+          "default": "Happy birthday {user}! \ud83c\udf82",
+          "maxLength": 2000,
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "title": "Birthdays",
+      "type": "object"
+    },
+    "Duel": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "send_hour": {
+          "default": 8,
+          "maximum": 23,
+          "minimum": 0,
+          "title": "Send Hour",
+          "type": "integer"
+        },
+        "send_minute": {
+          "default": 0,
+          "maximum": 59,
+          "minimum": 0,
+          "title": "Send Minute",
+          "type": "integer"
+        },
+        "clean_previous": {
+          "default": true,
+          "title": "Clean Previous",
+          "type": "boolean"
+        },
+        "templates": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Template"
+          },
+          "default": {},
+          "title": "Templates",
+          "type": "object"
+        }
+      },
+      "title": "Duel",
+      "type": "object"
+    },
+    "EmbedField": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        },
+        "inline": {
+          "default": false,
+          "title": "Inline",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "EmbedField",
+      "type": "object"
+    },
+    "EventDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "template": {
+          "$ref": "#/$defs/Template",
+          "default": {
+            "name": "Announcement",
+            "content": "",
+            "title": "Announcement",
+            "description": "",
+            "color": "#38BDF8",
+            "image": "",
+            "thumbnail": "",
+            "footer": "",
+            "fields": []
+          }
+        },
+        "reminder_minutes": {
+          "default": [
+            60,
+            10
+          ],
+          "items": {
+            "maximum": 10080,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "maxItems": 10,
+          "title": "Reminder Minutes",
+          "type": "array"
+        },
+        "duration_minutes": {
+          "default": 15,
+          "maximum": 43200,
+          "minimum": 1,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "repeat_hours": {
+          "anyOf": [
+            {
+              "maximum": 8760,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Repeat Hours"
+        },
+        "interval_minutes": {
+          "anyOf": [
+            {
+              "maximum": 10080,
+              "minimum": 5,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interval Minutes"
+        },
+        "keep_messages": {
+          "default": false,
+          "title": "Keep Messages",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "EventDefinition",
+      "type": "object"
+    },
+    "Events": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "calendar_channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Calendar Channel Id"
+        },
+        "definitions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EventDefinition"
+          },
+          "maxItems": 50,
+          "title": "Definitions",
+          "type": "array"
+        }
+      },
+      "title": "Events",
+      "type": "object"
+    },
+    "Filter": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "action": {
+          "default": "delete",
+          "enum": [
+            "delete",
+            "warn",
+            "mute"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "minutes": {
+          "default": 10,
+          "maximum": 1440,
+          "minimum": 1,
+          "title": "Minutes",
+          "type": "integer"
+        },
+        "threshold": {
+          "default": 5,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Threshold",
+          "type": "integer"
+        },
+        "window": {
+          "default": 5,
+          "maximum": 120,
+          "minimum": 1,
+          "title": "Window",
+          "type": "integer"
+        }
+      },
+      "title": "Filter",
+      "type": "object"
+    },
+    "Giveaways": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "manager_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Manager Roles",
+          "type": "array"
+        }
+      },
+      "title": "Giveaways",
+      "type": "object"
+    },
+    "Lock": {
+      "additionalProperties": false,
+      "properties": {
+        "channel_id": {
+          "pattern": "^[0-9]{1,20}$",
+          "title": "Channel Id",
+          "type": "string"
+        },
+        "exempt_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Exempt Roles",
+          "type": "array"
+        },
+        "allow_bots": {
+          "default": true,
+          "title": "Allow Bots",
+          "type": "boolean"
+        },
+        "violation": {
+          "default": "silent",
+          "enum": [
+            "silent",
+            "reply",
+            "dm"
+          ],
+          "title": "Violation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel_id"
+      ],
+      "title": "Lock",
+      "type": "object"
+    },
+    "LogTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "default": "moderation",
+          "maxLength": 40,
+          "title": "Category",
+          "type": "string"
+        },
+        "channel_id": {
+          "pattern": "^[0-9]{1,20}$",
+          "title": "Channel Id",
+          "type": "string"
+        },
+        "color": {
+          "default": "#38BDF8",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel_id"
+      ],
+      "title": "LogTarget",
+      "type": "object"
+    },
+    "Logs": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "targets": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/LogTarget"
+          },
+          "maxItems": 30,
+          "title": "Targets",
+          "type": "array"
+        }
+      },
+      "title": "Logs",
+      "type": "object"
+    },
+    "Messages": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "send_permission": {
+          "default": "moderators",
+          "enum": [
+            "everyone",
+            "moderators",
+            "custom",
+            "administrators"
+          ],
+          "title": "Send Permission",
+          "type": "string"
+        },
+        "send_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Send Roles",
+          "type": "array"
+        },
+        "allowed_channels": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Allowed Channels",
+          "type": "array"
+        },
+        "templates": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Template"
+          },
+          "maxItems": 50,
+          "title": "Templates",
+          "type": "array"
+        }
+      },
+      "title": "Messages",
+      "type": "object"
+    },
+    "Moderation": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Roles",
+          "type": "array"
+        },
+        "dm_on_action": {
+          "default": true,
+          "title": "Dm On Action",
+          "type": "boolean"
+        },
+        "warning_threshold": {
+          "default": 3,
+          "maximum": 10,
+          "minimum": 1,
+          "title": "Warning Threshold",
+          "type": "integer"
+        },
+        "expire_warning_days": {
+          "default": 0,
+          "maximum": 3650,
+          "minimum": 0,
+          "title": "Expire Warning Days",
+          "type": "integer"
+        },
+        "locks": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Lock"
+          },
+          "maxItems": 100,
+          "title": "Locks",
+          "type": "array"
+        }
+      },
+      "title": "Moderation",
+      "type": "object"
+    },
+    "Polls": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "create_permission": {
+          "default": "moderators",
+          "enum": [
+            "everyone",
+            "moderators",
+            "custom",
+            "administrators"
+          ],
+          "title": "Create Permission",
+          "type": "string"
+        },
+        "create_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Create Roles",
+          "type": "array"
+        },
+        "default_minutes": {
+          "default": 1440,
+          "maximum": 525600,
+          "minimum": 1,
+          "title": "Default Minutes",
+          "type": "integer"
+        },
+        "multiple": {
+          "default": false,
+          "title": "Multiple",
+          "type": "boolean"
+        },
+        "anonymous": {
+          "default": false,
+          "title": "Anonymous",
+          "type": "boolean"
+        }
+      },
+      "title": "Polls",
+      "type": "object"
+    },
+    "Presidents": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "role_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Role Id"
+        },
+        "appointment_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Appointment Roles",
+          "type": "array"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        }
+      },
+      "title": "Presidents",
+      "type": "object"
+    },
+    "ReactionRoles": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "panels": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RolePanel"
+          },
+          "maxItems": 30,
+          "title": "Panels",
+          "type": "array"
+        }
+      },
+      "title": "ReactionRoles",
+      "type": "object"
+    },
+    "RoleMapping": {
+      "additionalProperties": false,
+      "properties": {
+        "role_id": {
+          "pattern": "^[0-9]{1,20}$",
+          "title": "Role Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "emoji": {
+          "default": "",
+          "maxLength": 100,
+          "title": "Emoji",
+          "type": "string"
+        }
+      },
+      "required": [
+        "role_id",
+        "label"
+      ],
+      "title": "RoleMapping",
+      "type": "object"
+    },
+    "RolePanel": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "title": {
+          "default": "Choose your roles",
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "behavior": {
+          "default": "toggle",
+          "enum": [
+            "toggle",
+            "add_only",
+            "exclusive"
+          ],
+          "title": "Behavior",
+          "type": "string"
+        },
+        "mode": {
+          "default": "buttons",
+          "enum": [
+            "buttons",
+            "dropdown",
+            "reactions"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "mappings": {
+          "items": {
+            "$ref": "#/$defs/RoleMapping"
+          },
+          "maxItems": 25,
+          "minItems": 1,
+          "title": "Mappings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "mappings"
+      ],
+      "title": "RolePanel",
+      "type": "object"
+    },
+    "Starboard": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "emoji": {
+          "default": "\u2b50",
+          "title": "Emoji",
+          "type": "string"
+        },
+        "threshold": {
+          "default": 3,
+          "maximum": 1000,
+          "minimum": 1,
+          "title": "Threshold",
+          "type": "integer"
+        },
+        "self_star": {
+          "default": false,
+          "title": "Self Star",
+          "type": "boolean"
+        },
+        "ignore_bots": {
+          "default": true,
+          "title": "Ignore Bots",
+          "type": "boolean"
+        },
+        "ignore_channels": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Ignore Channels",
+          "type": "array"
+        }
+      },
+      "title": "Starboard",
+      "type": "object"
+    },
+    "Suggestions": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "create_thread": {
+          "default": false,
+          "title": "Create Thread",
+          "type": "boolean"
+        },
+        "anonymous": {
+          "default": false,
+          "title": "Anonymous",
+          "type": "boolean"
+        },
+        "manage_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Manage Roles",
+          "type": "array"
+        }
+      },
+      "title": "Suggestions",
+      "type": "object"
+    },
+    "Template": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "Announcement",
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "content": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Content",
+          "type": "string"
+        },
+        "title": {
+          "default": "Announcement",
+          "maxLength": 256,
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "maxLength": 4096,
+          "title": "Description",
+          "type": "string"
+        },
+        "color": {
+          "default": "#38BDF8",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Color",
+          "type": "string"
+        },
+        "image": {
+          "default": "",
+          "title": "Image",
+          "type": "string"
+        },
+        "thumbnail": {
+          "default": "",
+          "title": "Thumbnail",
+          "type": "string"
+        },
+        "footer": {
+          "default": "",
+          "maxLength": 2048,
+          "title": "Footer",
+          "type": "string"
+        },
+        "fields": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EmbedField"
+          },
+          "maxItems": 25,
+          "title": "Fields",
+          "type": "array"
+        }
+      },
+      "title": "Template",
+      "type": "object"
+    },
+    "Tickets": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "category_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category Id"
+        },
+        "support_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Support Roles",
+          "type": "array"
+        },
+        "transcript_channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transcript Channel Id"
+        },
+        "categories": {
+          "default": [],
+          "items": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Categories",
+          "type": "array"
+        },
+        "max_per_user": {
+          "default": 3,
+          "maximum": 10,
+          "minimum": 1,
+          "title": "Max Per User",
+          "type": "integer"
+        },
+        "close_confirmation": {
+          "default": true,
+          "title": "Close Confirmation",
+          "type": "boolean"
+        },
+        "auto_close_hours": {
+          "default": 0,
+          "maximum": 8760,
+          "minimum": 0,
+          "title": "Auto Close Hours",
+          "type": "integer"
+        }
+      },
+      "title": "Tickets",
+      "type": "object"
+    },
+    "Translation": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "default_language": {
+          "default": "EN-US",
+          "maxLength": 5,
+          "pattern": "^[A-Z]{2}(-[A-Z]{2})?$",
+          "title": "Default Language",
+          "type": "string"
+        },
+        "per_user_hourly_limit": {
+          "default": 20,
+          "maximum": 200,
+          "minimum": 1,
+          "title": "Per User Hourly Limit",
+          "type": "integer"
+        }
+      },
+      "title": "Translation",
+      "type": "object"
+    },
+    "Welcome": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Id"
+        },
+        "goodbye_channel_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,20}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Goodbye Channel Id"
+        },
+        "message": {
+          "default": "Welcome {user} to {server}!",
+          "maxLength": 2000,
+          "title": "Message",
+          "type": "string"
+        },
+        "goodbye": {
+          "default": "{name} has left {server}.",
+          "maxLength": 2000,
+          "title": "Goodbye",
+          "type": "string"
+        },
+        "auto_roles": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9]{1,20}$",
+            "type": "string"
+          },
+          "title": "Auto Roles",
+          "type": "array"
+        }
+      },
+      "title": "Welcome",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "timezone": {
+      "default": "UTC",
+      "title": "Timezone",
+      "type": "string"
+    },
+    "color": {
+      "default": "#38BDF8",
+      "pattern": "^#[0-9a-fA-F]{6}$",
+      "title": "Color",
+      "type": "string"
+    },
+    "dashboard_users": {
+      "default": [],
+      "items": {
+        "pattern": "^[0-9]{1,20}$",
+        "type": "string"
+      },
+      "title": "Dashboard Users",
+      "type": "array"
+    },
+    "moderation": {
+      "$ref": "#/$defs/Moderation",
+      "default": {
+        "enabled": false,
+        "roles": [],
+        "dm_on_action": true,
+        "warning_threshold": 3,
+        "expire_warning_days": 0,
+        "locks": []
+      }
+    },
+    "automod": {
+      "$ref": "#/$defs/Automod",
+      "default": {
+        "enabled": false,
+        "exempt_roles": [],
+        "exempt_channels": [],
+        "spam": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 5,
+          "window": 5
+        },
+        "flood": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 3,
+          "window": 30
+        },
+        "caps": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 70,
+          "window": 5
+        },
+        "mentions": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 5,
+          "window": 5
+        },
+        "links": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 5,
+          "window": 5
+        },
+        "invites": {
+          "action": "delete",
+          "enabled": false,
+          "minutes": 10,
+          "threshold": 5,
+          "window": 5
+        },
+        "allowed_domains": []
+      }
+    },
+    "welcome": {
+      "$ref": "#/$defs/Welcome",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "goodbye_channel_id": null,
+        "message": "Welcome {user} to {server}!",
+        "goodbye": "{name} has left {server}.",
+        "auto_roles": []
+      }
+    },
+    "logs": {
+      "$ref": "#/$defs/Logs",
+      "default": {
+        "enabled": false,
+        "targets": []
+      }
+    },
+    "reaction_roles": {
+      "$ref": "#/$defs/ReactionRoles",
+      "default": {
+        "enabled": false,
+        "panels": []
+      }
+    },
+    "suggestions": {
+      "$ref": "#/$defs/Suggestions",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "create_thread": false,
+        "anonymous": false,
+        "manage_roles": []
+      }
+    },
+    "polls": {
+      "$ref": "#/$defs/Polls",
+      "default": {
+        "enabled": false,
+        "create_permission": "moderators",
+        "create_roles": [],
+        "default_minutes": 1440,
+        "multiple": false,
+        "anonymous": false
+      }
+    },
+    "starboard": {
+      "$ref": "#/$defs/Starboard",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "emoji": "\u2b50",
+        "threshold": 3,
+        "self_star": false,
+        "ignore_bots": true,
+        "ignore_channels": []
+      }
+    },
+    "giveaways": {
+      "$ref": "#/$defs/Giveaways",
+      "default": {
+        "enabled": false,
+        "manager_roles": []
+      }
+    },
+    "messages": {
+      "$ref": "#/$defs/Messages",
+      "default": {
+        "enabled": false,
+        "send_permission": "moderators",
+        "send_roles": [],
+        "allowed_channels": [],
+        "templates": []
+      }
+    },
+    "translation": {
+      "$ref": "#/$defs/Translation",
+      "default": {
+        "enabled": false,
+        "default_language": "EN-US",
+        "per_user_hourly_limit": 20
+      }
+    },
+    "duel": {
+      "$ref": "#/$defs/Duel",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "send_hour": 8,
+        "send_minute": 0,
+        "clean_previous": true,
+        "templates": {}
+      }
+    },
+    "events": {
+      "$ref": "#/$defs/Events",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "calendar_channel_id": null,
+        "definitions": []
+      }
+    },
+    "tickets": {
+      "$ref": "#/$defs/Tickets",
+      "default": {
+        "enabled": false,
+        "category_id": null,
+        "support_roles": [],
+        "transcript_channel_id": null,
+        "categories": [],
+        "max_per_user": 3,
+        "close_confirmation": true,
+        "auto_close_hours": 0
+      }
+    },
+    "alliances": {
+      "$ref": "#/$defs/Alliances",
+      "default": {
+        "enabled": false,
+        "management_roles": [],
+        "r4_roles": [],
+        "r5_roles": [],
+        "traveler_role_id": null,
+        "max_alliances": 10,
+        "max_members": 100,
+        "auto_nick_tag": false
+      }
+    },
+    "presidents": {
+      "$ref": "#/$defs/Presidents",
+      "default": {
+        "enabled": false,
+        "role_id": null,
+        "appointment_roles": [],
+        "channel_id": null
+      }
+    },
+    "armory": {
+      "$ref": "#/$defs/Armory",
+      "default": {
+        "enabled": false,
+        "channel_id": null
+      }
+    },
+    "apc": {
+      "$ref": "#/$defs/APC",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "private": false,
+        "leaderboard_roles": []
+      }
+    },
+    "birthdays": {
+      "$ref": "#/$defs/Birthdays",
+      "default": {
+        "enabled": false,
+        "channel_id": null,
+        "send_hour": 8,
+        "send_minute": 0,
+        "message": "Happy birthday {user}! \ud83c\udf82"
+      }
+    }
+  },
+  "title": "GuildConfig",
+  "type": "object"
+}

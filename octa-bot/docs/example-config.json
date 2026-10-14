@@ -1,0 +1,302 @@
+{
+  "timezone": "Asia/Amman",
+  "color": "#38BDF8",
+  "dashboard_users": [],
+  "moderation": {
+    "enabled": false,
+    "roles": [],
+    "dm_on_action": true,
+    "warning_threshold": 3,
+    "expire_warning_days": 0,
+    "locks": []
+  },
+  "automod": {
+    "enabled": false,
+    "exempt_roles": [],
+    "exempt_channels": [],
+    "spam": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 5,
+      "window": 5
+    },
+    "flood": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 3,
+      "window": 30
+    },
+    "caps": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 70,
+      "window": 5
+    },
+    "mentions": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 5,
+      "window": 5
+    },
+    "links": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 5,
+      "window": 5
+    },
+    "invites": {
+      "enabled": false,
+      "action": "delete",
+      "minutes": 10,
+      "threshold": 5,
+      "window": 5
+    },
+    "allowed_domains": []
+  },
+  "welcome": {
+    "enabled": false,
+    "channel_id": null,
+    "goodbye_channel_id": null,
+    "message": "Welcome {user} to {server}!",
+    "goodbye": "{name} has left {server}.",
+    "auto_roles": []
+  },
+  "logs": {
+    "enabled": false,
+    "targets": []
+  },
+  "reaction_roles": {
+    "enabled": false,
+    "panels": [
+      {
+        "name": "Interests",
+        "title": "Choose your roles",
+        "behavior": "toggle",
+        "mode": "buttons",
+        "mappings": [
+          {
+            "role_id": "123456789012345678",
+            "label": "Event reminders",
+            "emoji": "📅"
+          }
+        ]
+      }
+    ]
+  },
+  "suggestions": {
+    "enabled": false,
+    "channel_id": null,
+    "create_thread": false,
+    "anonymous": false,
+    "manage_roles": []
+  },
+  "polls": {
+    "enabled": false,
+    "create_permission": "moderators",
+    "create_roles": [],
+    "default_minutes": 1440,
+    "multiple": false,
+    "anonymous": false
+  },
+  "starboard": {
+    "enabled": false,
+    "channel_id": null,
+    "emoji": "⭐",
+    "threshold": 3,
+    "self_star": false,
+    "ignore_bots": true,
+    "ignore_channels": []
+  },
+  "giveaways": {
+    "enabled": false,
+    "manager_roles": []
+  },
+  "messages": {
+    "enabled": false,
+    "send_permission": "moderators",
+    "send_roles": [],
+    "allowed_channels": [],
+    "templates": [
+      {
+        "name": "Alliance briefing",
+        "content": "",
+        "title": "Alliance briefing",
+        "description": "Share this week's plan here.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      }
+    ]
+  },
+  "translation": {
+    "enabled": false,
+    "default_language": "EN-US",
+    "per_user_hourly_limit": 20
+  },
+  "duel": {
+    "enabled": false,
+    "channel_id": null,
+    "send_hour": 8,
+    "send_minute": 0,
+    "clean_previous": true,
+    "templates": {
+      "1": {
+        "name": "Day 1",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "2": {
+        "name": "Day 2",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "3": {
+        "name": "Day 3",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "4": {
+        "name": "Day 4",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "5": {
+        "name": "Day 5",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "6": {
+        "name": "Day 6",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      },
+      "7": {
+        "name": "Day 7",
+        "content": "",
+        "title": "Daily duel plan",
+        "description": "Replace this with your own strategy.",
+        "color": "#38BDF8",
+        "image": "",
+        "thumbnail": "",
+        "footer": "",
+        "fields": []
+      }
+    }
+  },
+  "events": {
+    "enabled": false,
+    "channel_id": null,
+    "calendar_channel_id": null,
+    "definitions": [
+      {
+        "name": "Alliance briefing",
+        "channel_id": null,
+        "template": {
+          "name": "Announcement",
+          "content": "",
+          "title": "Alliance briefing",
+          "description": "Our briefing starts {countdown}.",
+          "color": "#38BDF8",
+          "image": "",
+          "thumbnail": "",
+          "footer": "",
+          "fields": []
+        },
+        "reminder_minutes": [
+          60,
+          10
+        ],
+        "duration_minutes": 15,
+        "repeat_hours": 168,
+        "interval_minutes": null,
+        "keep_messages": false
+      }
+    ]
+  },
+  "tickets": {
+    "enabled": false,
+    "category_id": null,
+    "support_roles": [],
+    "transcript_channel_id": null,
+    "categories": [],
+    "max_per_user": 3,
+    "close_confirmation": true,
+    "auto_close_hours": 0
+  },
+  "alliances": {
+    "enabled": false,
+    "management_roles": [],
+    "r4_roles": [],
+    "r5_roles": [],
+    "traveler_role_id": null,
+    "max_alliances": 10,
+    "max_members": 100,
+    "auto_nick_tag": false
+  },
+  "presidents": {
+    "enabled": false,
+    "role_id": null,
+    "appointment_roles": [],
+    "channel_id": null
+  },
+  "armory": {
+    "enabled": false,
+    "channel_id": null
+  },
+  "apc": {
+    "enabled": false,
+    "channel_id": null,
+    "private": false,
+    "leaderboard_roles": []
+  },
+  "birthdays": {
+    "enabled": false,
+    "channel_id": null,
+    "send_hour": 8,
+    "send_minute": 0,
+    "message": "Happy birthday {user}! 🎂"
+  }
+}

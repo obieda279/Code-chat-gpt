@@ -1,0 +1,1487 @@
+[
+  {
+    "name": "dashboard",
+    "description": "Open the Sentinel configuration dashboard",
+    "type": 1,
+    "options": [],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "status",
+    "description": "Show bot status and enabled modules",
+    "type": 1,
+    "options": [],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "ban",
+    "description": "Ban a server member",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "reason",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "kick",
+    "description": "Kick a server member",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "reason",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "warn",
+    "description": "Warn a server member",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "reason",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "unmute",
+    "description": "Unmute a server member",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "reason",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "mute",
+    "description": "Time out a member for up to 28 days",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 4,
+        "name": "minutes",
+        "description": "\u2026",
+        "required": false,
+        "min_value": 1,
+        "max_value": 40320
+      },
+      {
+        "type": 3,
+        "name": "reason",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "warnings",
+    "description": "Show a member's last ten warnings",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "clear",
+    "description": "Remove up to 100 recent messages from this channel",
+    "type": 1,
+    "options": [
+      {
+        "type": 4,
+        "name": "amount",
+        "description": "\u2026",
+        "required": true,
+        "min_value": 1,
+        "max_value": 100
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "setnick",
+    "description": "Change or reset a member's nickname",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "target",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "nickname",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "role",
+    "description": "Manage member roles",
+    "type": 1,
+    "options": [
+      {
+        "name": "add",
+        "description": "Assign a role",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "target",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 8,
+            "name": "role",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "remove",
+        "description": "Remove a role",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "target",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 8,
+            "name": "role",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "slowmode",
+    "description": "Set channel slowmode, optionally with a removal timer",
+    "type": 1,
+    "options": [
+      {
+        "type": 4,
+        "name": "seconds",
+        "description": "\u2026",
+        "required": true,
+        "min_value": 0,
+        "max_value": 21600
+      },
+      {
+        "type": 7,
+        "name": "channel",
+        "description": "\u2026",
+        "required": false,
+        "channel_types": [
+          0,
+          5
+        ]
+      },
+      {
+        "type": 4,
+        "name": "minutes",
+        "description": "\u2026",
+        "required": false,
+        "min_value": 1,
+        "max_value": 40320
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "lockdown",
+    "description": "Limit a text channel to bot commands and configured roles",
+    "type": 1,
+    "options": [
+      {
+        "type": 7,
+        "name": "channel",
+        "description": "\u2026",
+        "required": true,
+        "channel_types": [
+          0,
+          5
+        ]
+      },
+      {
+        "type": 5,
+        "name": "allow_bots",
+        "description": "\u2026",
+        "required": false
+      },
+      {
+        "type": 3,
+        "name": "violation",
+        "description": "\u2026",
+        "required": false,
+        "choices": [
+          {
+            "name": "silent",
+            "value": "silent"
+          },
+          {
+            "name": "reply",
+            "value": "reply"
+          },
+          {
+            "name": "dm",
+            "value": "dm"
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "unlock",
+    "description": "Remove a channel's bot-command-only lock",
+    "type": 1,
+    "options": [
+      {
+        "type": 7,
+        "name": "channel",
+        "description": "\u2026",
+        "required": true,
+        "channel_types": [
+          0,
+          5
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "userinfo",
+    "description": "Show server membership details",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "member",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "serverinfo",
+    "description": "Show server details",
+    "type": 1,
+    "options": [],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "poll",
+    "description": "Create a persistent poll with 2\u201310 choices",
+    "type": 1,
+    "options": [
+      {
+        "type": 3,
+        "name": "question",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "options",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "ends_in",
+        "description": "\u2026",
+        "required": false
+      },
+      {
+        "type": 5,
+        "name": "multiple",
+        "description": "\u2026",
+        "required": false
+      },
+      {
+        "type": 5,
+        "name": "anonymous",
+        "description": "\u2026",
+        "required": false
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "polls",
+    "description": "List active polls in channels you can access",
+    "type": 1,
+    "options": [],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "suggest",
+    "description": "Submit a suggestion for community discussion",
+    "type": 1,
+    "options": [
+      {
+        "type": 3,
+        "name": "content",
+        "description": "\u2026",
+        "required": true
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "giveaway",
+    "description": "Run giveaways",
+    "type": 1,
+    "options": [
+      {
+        "name": "start",
+        "description": "Create a giveaway with persistent entry buttons",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "prize",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "ends_in",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 4,
+            "name": "winners",
+            "description": "\u2026",
+            "required": false,
+            "min_value": 1,
+            "max_value": 20
+          }
+        ]
+      },
+      {
+        "name": "reroll",
+        "description": "Choose new winners from a closed giveaway",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "panel_id",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "roles",
+    "description": "Deploy self-service role panels",
+    "type": 1,
+    "options": [
+      {
+        "name": "panel",
+        "description": "Deploy a saved role panel",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 7,
+            "name": "channel",
+            "description": "\u2026",
+            "required": false,
+            "channel_types": [
+              0,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "embed",
+    "description": "Use saved message templates",
+    "type": 1,
+    "options": [
+      {
+        "name": "list",
+        "description": "List saved embed templates",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "send",
+        "description": "Send a saved template",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 7,
+            "name": "channel",
+            "description": "\u2026",
+            "required": false,
+            "channel_types": [
+              0,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "alliance",
+    "description": "Manage Dark War Survival alliances",
+    "type": 1,
+    "options": [
+      {
+        "name": "create",
+        "description": "Create an alliance and its Discord role",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "tag",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "color",
+            "description": "\u2026",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "import",
+        "description": "Import an existing role with an explicit leader",
+        "type": 1,
+        "options": [
+          {
+            "type": 8,
+            "name": "role",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 6,
+            "name": "leader",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "tag",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "description": "Delete an alliance after explicit confirmation",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 5,
+            "name": "confirm",
+            "description": "\u2026",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "invite",
+        "description": "Add a member to your alliance as R1",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "kick",
+        "description": "Kick a member in your alliance",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "promote",
+        "description": "Promote a member in your alliance",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "demote",
+        "description": "Demote a member in your alliance",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "transfer",
+        "description": "Transfer a member in your alliance",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "leave",
+        "description": "Leave your current alliance",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "setleader",
+        "description": "Set an alliance's R5 leader",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "description": "List alliances in this server",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "info",
+        "description": "Show an alliance and its members",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "president",
+    "description": "Manage the server presidency",
+    "type": 1,
+    "options": [
+      {
+        "name": "appoint",
+        "description": "Appoint a president and end the previous term",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "remove",
+        "description": "End the current president's term",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "info",
+        "description": "Show the current president",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "history",
+        "description": "Show the last ten presidential terms",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "decree",
+        "description": "Publish a presidential decree",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "message",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "decree_type",
+            "description": "\u2026",
+            "required": false,
+            "choices": [
+              {
+                "name": "General",
+                "value": "General"
+              },
+              {
+                "name": "Economic",
+                "value": "Economic"
+              },
+              {
+                "name": "Military",
+                "value": "Military"
+              },
+              {
+                "name": "Diplomatic",
+                "value": "Diplomatic"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "armory",
+    "description": "Manage weekly armory assignments",
+    "type": 1,
+    "options": [
+      {
+        "name": "assign",
+        "description": "Assign an alliance to a slot in the current UTC week",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "slot",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 8
+          },
+          {
+            "type": 3,
+            "name": "alliance_name",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "clear",
+        "description": "Clear a slot in the current UTC week",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "slot",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 8
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "apc",
+    "description": "Report and view APC strength",
+    "type": 1,
+    "options": [
+      {
+        "name": "submit",
+        "description": "Report your main and second APC strength",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "main",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "second",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "main_faction",
+            "description": "\u2026",
+            "required": false,
+            "choices": [
+              {
+                "name": "Fighters",
+                "value": "Fighters"
+              },
+              {
+                "name": "Shooters",
+                "value": "Shooters"
+              },
+              {
+                "name": "Riders",
+                "value": "Riders"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "name": "second_faction",
+            "description": "\u2026",
+            "required": false,
+            "choices": [
+              {
+                "name": "Fighters",
+                "value": "Fighters"
+              },
+              {
+                "name": "Shooters",
+                "value": "Shooters"
+              },
+              {
+                "name": "Riders",
+                "value": "Riders"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "view",
+        "description": "Privately view your own strength",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "leaderboard",
+        "description": "Show the leaderboard, respecting its privacy setting",
+        "type": 1,
+        "options": []
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "apc-set",
+    "description": "Set a member's APC strength",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "member",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "main",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "second",
+        "description": "\u2026",
+        "required": true
+      },
+      {
+        "type": 3,
+        "name": "main_faction",
+        "description": "\u2026",
+        "required": false,
+        "choices": [
+          {
+            "name": "Fighters",
+            "value": "Fighters"
+          },
+          {
+            "name": "Shooters",
+            "value": "Shooters"
+          },
+          {
+            "name": "Riders",
+            "value": "Riders"
+          }
+        ]
+      },
+      {
+        "type": 3,
+        "name": "second_faction",
+        "description": "\u2026",
+        "required": false,
+        "choices": [
+          {
+            "name": "Fighters",
+            "value": "Fighters"
+          },
+          {
+            "name": "Shooters",
+            "value": "Shooters"
+          },
+          {
+            "name": "Riders",
+            "value": "Riders"
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "apc-remove",
+    "description": "Remove a specific member's APC entry",
+    "type": 1,
+    "options": [
+      {
+        "type": 6,
+        "name": "member",
+        "description": "\u2026",
+        "required": true
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "event",
+    "description": "Schedule game events",
+    "type": 1,
+    "options": [
+      {
+        "name": "schedule",
+        "description": "Schedule a saved event using server-local or offset ISO time",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "when",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "repeat_every",
+            "description": "Repeat every 30m, 24h, 7d, or 2w; off for one occurrence",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "description": "Create an event and optionally repeat it automatically",
+        "type": 1,
+        "options": [
+          {
+            "type": 3,
+            "name": "name",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 7,
+            "name": "channel",
+            "description": "\u2026",
+            "required": true,
+            "channel_types": [
+              0,
+              5
+            ]
+          },
+          {
+            "type": 3,
+            "name": "when",
+            "description": "First start: YYYY-MM-DDTHH:MM in server timezone, or include a UTC offset",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "message",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "repeat_every",
+            "description": "off, 30m, 24h, 7d, or 2w (minimum 5m)",
+            "required": false
+          },
+          {
+            "type": 4,
+            "name": "duration_minutes",
+            "description": "\u2026",
+            "required": false,
+            "min_value": 1,
+            "max_value": 43200
+          },
+          {
+            "type": 3,
+            "name": "reminder_minutes",
+            "description": "Comma-separated minutes before each run; none disables reminders",
+            "required": false
+          },
+          {
+            "type": 5,
+            "name": "keep_messages",
+            "description": "\u2026",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "series",
+        "description": "List recurring event schedules and their next run",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "repeat",
+        "description": "Pause, resume, stop, or change a recurring event schedule",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "series_id",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "action",
+            "description": "\u2026",
+            "required": true,
+            "choices": [
+              {
+                "name": "pause",
+                "value": "pause"
+              },
+              {
+                "name": "resume",
+                "value": "resume"
+              },
+              {
+                "name": "stop",
+                "value": "stop"
+              },
+              {
+                "name": "edit",
+                "value": "edit"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "name": "every",
+            "description": "New interval for edit: 30m, 24h, 7d, 2w",
+            "required": false
+          },
+          {
+            "type": 3,
+            "name": "when",
+            "description": "Optional new first start for edit; otherwise keep the original anchor",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "description": "List upcoming scheduled events",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "cancel",
+        "description": "Cancel a scheduled or active event by ID",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "event_id",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "duel",
+    "description": "Daily alliance-duel reminders",
+    "type": 1,
+    "options": [
+      {
+        "name": "preview",
+        "description": "Privately preview today's configured duel strategy",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "send",
+        "description": "Send today's duel strategy now",
+        "type": 1,
+        "options": []
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "ticket",
+    "description": "Manage private support tickets",
+    "type": 1,
+    "options": [
+      {
+        "name": "panel",
+        "description": "Deploy the support ticket panel",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "close",
+        "description": "Close this ticket and save its configured transcript",
+        "type": 1,
+        "options": []
+      },
+      {
+        "name": "add",
+        "description": "Add a participant to this ticket",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "remove",
+        "description": "Remove a participant from this ticket",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "birthday",
+    "description": "Birthday calendar",
+    "type": 1,
+    "options": [
+      {
+        "name": "set",
+        "description": "Set your birthday once; birth year is optional",
+        "type": 1,
+        "options": [
+          {
+            "type": 4,
+            "name": "month",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 12
+          },
+          {
+            "type": 4,
+            "name": "day",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 31
+          },
+          {
+            "type": 4,
+            "name": "year",
+            "description": "\u2026",
+            "required": false,
+            "min_value": 1900,
+            "max_value": 2100
+          }
+        ]
+      },
+      {
+        "name": "set-user",
+        "description": "Set or correct another member's birthday",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          },
+          {
+            "type": 4,
+            "name": "month",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 12
+          },
+          {
+            "type": 4,
+            "name": "day",
+            "description": "\u2026",
+            "required": true,
+            "min_value": 1,
+            "max_value": 31
+          },
+          {
+            "type": 4,
+            "name": "year",
+            "description": "\u2026",
+            "required": false,
+            "min_value": 1900,
+            "max_value": 2100
+          }
+        ]
+      },
+      {
+        "name": "remove-user",
+        "description": "Remove a birthday record",
+        "type": 1,
+        "options": [
+          {
+            "type": 6,
+            "name": "member",
+            "description": "\u2026",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "upcoming",
+        "description": "Show the next ten birthdays without birth years",
+        "type": 1,
+        "options": []
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "setlang",
+    "description": "Set your global preferred translation language",
+    "type": 1,
+    "options": [
+      {
+        "type": 3,
+        "name": "language",
+        "description": "\u2026",
+        "required": true
+      }
+    ],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "languages",
+    "description": "List target languages currently supported by DeepL",
+    "type": 1,
+    "options": [],
+    "nsfw": false,
+    "dm_permission": false,
+    "default_member_permissions": null,
+    "contexts": null,
+    "integration_types": null
+  },
+  {
+    "name": "Translate Message",
+    "type": 3,
+    "dm_permission": false,
+    "contexts": null,
+    "integration_types": null,
+    "default_member_permissions": null,
+    "nsfw": false
+  },
+  {
+    "name": "Translate Voice",
+    "type": 3,
+    "dm_permission": false,
+    "contexts": null,
+    "integration_types": null,
+    "default_member_permissions": null,
+    "nsfw": false
+  }
+]

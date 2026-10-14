@@ -1,0 +1,15 @@
+services:
+  sentinel:
+    build: .
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      DATABASE_PATH: /app/data/sentinel.db
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - sentinel-data:/app/data
+    restart: unless-stopped
+    init: true
+volumes:
+  sentinel-data:

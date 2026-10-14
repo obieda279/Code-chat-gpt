@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sentinel · Community control</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<div id="login" class="login hidden"><div class="login-card"><div class="brand-mark">S</div><p class="eyebrow">YOUR COMMUNITY. YOUR CONTROL.</p><h1>A calmer command center.</h1><p>Bring your Discord community, alliance tools, and everyday routines together.</p><a href="/auth/login" class="primary">Continue with Discord</a><p id="login-hint" class="muted"></p></div></div>
+<div id="shell" class="shell hidden">
+  <aside><a href="/" class="brand"><span class="brand-mark">S</span><span>sentinel<span class="brand-sub">COMMUNITY CONTROL</span></span></a><label class="muted" for="guild-select">YOUR SERVER</label><select id="guild-select"></select><nav id="nav" aria-label="Main navigation"></nav><div class="sidebar-bottom"><span class="status-dot"></span><span id="connection">Connecting</span><button id="logout" class="text-button">Sign out</button></div></aside>
+  <main><header><div><p class="eyebrow" id="breadcrumb">WORKSPACE / OVERVIEW</p><h1 id="page-title">Command center</h1></div><span id="mode" class="badge">LIVE</span></header><div id="banner" class="notice hidden"></div><div id="content"></div></main>
+</div>
+<div id="toast" role="status" class="toast hidden"></div>
+<div id="savebar" class="savebar hidden"><span>You have unsaved changes.</span><div><button id="discard" class="secondary">Discard</button><button id="save" class="primary">Save changes</button></div></div>
+<dialog id="editor"><div class="dialog-top"><div><p class="eyebrow">MODULE SETTINGS</p><h2 id="editor-title"></h2></div><button id="close-editor" aria-label="Close settings" class="icon-button">×</button></div><div id="editor-fields"></div><button id="done-editor" class="primary">Done</button></dialog>
+</body></html>
